@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Yomogi&display=swap');
+
+body{
+    font-family: 'Sacramento', cursive;
+    font-family: 'Yomogi', cursive;
+    background-color: rgb(244, 165, 138);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: antiquewhite;
+    min-height: 100vh;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1rem;
+}
+
+.img{position: relative;
+padding-left: 100px;}
+
+.menu {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color:#d28a7c;
+}
+
+@media screen and (max-width:600px){
+    .menu ul {
+        flex-direction: column;
+    }
+    .dropdown-content {
+        width: 100%;
+    }
+}
+
+@media screen and not (max-width:600px){
+    .menu>ul>li {
+        width: 250px;
+    }
+    .dropdown-content{
+        margin-left: 20px;
+        width: 200px;
+    }
+}
+
+.menu li a {
+    display: block;
+    color:black;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.menu li a:hover {
+    color:antiquewhite
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+}
